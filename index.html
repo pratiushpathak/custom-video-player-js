@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Video Player</h1>
+  <div class="container">
+    <div class="video-wrapper">
+      <video class="player" src="3195394-uhd_3840_2160_25fps.mp4" controls></video>
+    </div>
+    <div class="controls">
+      <button class="control-btn start">Start</button>
+      <button class="control-btn play">Play</button>
+      <button class="control-btn pause">Pause</button>
+      <progress id="progress" value="32" max="100">32%</progress>
+      <button class="control-btn fullscreen">Fullscreen</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
