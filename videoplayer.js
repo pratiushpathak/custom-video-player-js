@@ -30,13 +30,31 @@ function updatePlayIcon(){
 }
 //update progeess & timestamp
 function updateProgress(){
-  return true;
+  // console.log(video.currentTime)
+  // console.log(video.duration)
+  progress.value=(video.currentTime/video.duration)*100;
+
+// get minutes
+let mins=Math.floor(video.currentTime/60);
+if(mins<0)
+{
+  mins='0'+String(mins);
+}
+//get Seconds
+let secs=Math.floor(video.currentTime%60);
+if(secs<0)
+{
+  secs='0'+String(mins);
+}
+
+timestamp.innerHTML=`${mins}:${secs}`;
+
 }
 
 // set video time to progress
 function setVideoprogress()
 {
-  return true
+  video.currentTime=+(progress.value*video.duration)/100;
 }
 
 // stop video
